@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <link rel="shortcut icon" href="images/logoM.png">
+    <title>404 - MARKOKLEŠTĚ</title>
+</head>
+<body>
+    <div>
+
+        <h1 id="404">404 :(</h1>
+
+        <h1 id="pnf">Page Not Found</h1>
+
+    </div>
+</body>
+</html>
+<style>
+    @font-face{
+    font-family: Orbitron;
+    src:  url(fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    background: rgba(0, 0, 0, 0.7) url("images/vesmir.png");
+    background-blend-mode: darken;
+}
+h1{
+    font-size: 900%;
+    font-family: Orbitron;
+}
+div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+@media screen and (max-width: 900px){
+    #pnf{
+        display: none;
+    }
+    h1{
+        font-size: 500%;
+    }
+}
+</style>

@@ -1,0 +1,631 @@
+@font-face{
+    font-family: Orbitron;
+    src:  url(fonts/Orbitron-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: RobotoCondensed;
+    src:  url(fonts/RobotoCondensed-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: RobotoCondensed-Italic;
+    src:  url(fonts/RobotoCondensed-Italic-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: RobotoCondensed;
+    color: white;
+    background: rgba(0, 0, 0, 0.7) url("images/background.png");
+    background-blend-mode: darken;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    height: 7%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.title-pc{
+    margin: 0.2% 0 0 ;
+    color: white;
+    font-family: Orbitron;
+    font-size: 200%;
+}
+
+.title-mobile{
+    display: none;
+}
+
+nav{
+margin: 0.2% 0 0 ;
+font-size: 200%;
+width: 50%;
+text-align: center;
+}
+
+.nav {
+    margin: 0 1.5% 0;
+    position: relative;
+    display: inline-block;
+}
+
+.nav::before, .nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.nav::before {
+    left: 50%;
+    width: 0;
+}
+
+.nav::after {
+    right: 50%;
+    width: 0;
+}
+
+.nav:hover::before {
+    width: 50%;
+    left: 0;
+}
+
+.nav:hover::after {
+    width: 50%;
+    right: 0;
+}
+
+.src{
+    display:flex;
+    align-items: center;
+    gap: 5%
+}
+
+.src-img{
+    max-height: 40px;
+}
+
+.src-input {
+    padding: 8px 12px; 
+    color: white;
+    font-size: 1rem;
+    font-family: RobotoCondensed;
+    background-color: #0D0F10; 
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    transition: 
+        background-color 0.5s ease;
+}
+
+.src-input:focus {
+    background-color: #2D3133; 
+}
+
+.menu-img{
+    display: none;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    float: left;
+    scroll-snap-align: center;
+    scroll-behavior: smooth;
+}
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3%;
+    height: 80%;
+}
+
+.ship-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2.5%;
+}
+
+.ship-info{
+    display: flex;
+    flex-direction: column;
+    border-right: solid white 10px;
+    padding: 0 3% 1% 0;
+}
+
+.ship-name{
+    font-family: Orbitron;
+    font-size: 600%;
+}
+
+.ship-launch{
+    font-family: RobotoCondensed;
+    font-size: 250%;
+    text-align: end;
+}
+
+.launch-year{
+    display: flex;
+}
+
+.year{
+    font-family: Orbitron;
+    font-size: 550%;
+}
+
+.home-button{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.more-button{
+    font-size: 200%;
+    border: solid #2D3133 2px;
+    padding: 0.6% 3%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.more-button:hover{
+    background-color: #0D0F10;
+}
+
+.about-title{
+    font-family: Orbitron;
+    font-size: 300%;
+    margin: 5% 0 0 5%;
+}
+
+.orbitron{
+    font-family: Orbitron;
+    font-weight: bold;
+}
+
+.about-container{
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-text{
+    width: 55%;
+}
+
+#p1, #p2, #p3{
+    font-size: 200%;
+    margin: 2.5% 5% 0 5%;
+}
+
+.marko-img{
+    max-height: 360Px;
+    border: solid black 2px;
+}
+
+.anvincible-title{
+    font-family: Orbitron;
+    font-size: 350%;
+    text-align: center;
+    margin: 5% 0 0;
+}
+
+.anvincible-container{
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.anvincible-text{
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.anvincible-features{
+    width: 50%;
+}
+
+ul{
+    margin: 0 0 0 5%;
+    list-style-type: none;
+}
+
+#p4{
+    font-size: 240%;
+    margin: 2.5% 5% 2.5% 5%;
+    padding: 0 0 2.5%;
+    border-bottom: solid #2D3133 4px;
+}
+
+#p5{
+        font-size: 240%;
+        margin: 0 5% 0 5%;
+}
+
+#li1, #li2, #li3, #li4{
+    font-size: 240%;
+    margin: 1.5% 0 0 20%;
+}
+
+.anvincible-button{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-button{
+    font-size: 240%;
+    border: solid #2D3133 2px;
+    padding: 3% 6%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 20% 0 0;
+}
+
+.join-button:hover{
+    background-color: #0D0F10;
+}
+
+.anvincible-img{
+    max-height: 500Px;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 1% 0 0;
+}
+
+.contact-title{
+    font-family: Orbitron;
+    font-size: 350%;
+    border-bottom: solid #2D3133 7px;
+}
+
+.first-name, .last-name, .e-mail, .phone-number, .message{
+    position: relative;
+    font-size: 150%;
+    padding: 20px 0 0;
+}
+
+.first-name input, .last-name input{
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #0D0F10;
+    color: white;
+    padding: 15px;
+    width: 340px;
+    outline: none;
+    font-size: 110%;
+    font-family: RobotoCondensed;
+    transition: 
+    background-color 0.5s ease;
+}
+
+.e-mail input, .phone-number input, .message textarea{
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #0D0F10;
+    color: white;
+    padding: 15px;
+    width: 700px;
+    outline: none;
+    font-size: 110%;
+    font-family: RobotoCondensed;
+    transition: 
+    background-color 0.5s ease;
+}
+
+.message textarea{
+    height: 200px;
+    resize: none; 
+    overflow-wrap: break-word;
+}
+
+.placeholder {
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+        top 0.3s ease,
+        font-size 0.3s ease,
+        color 0.3s ease;
+}
+
+.message .placeholder{
+position: absolute;
+left: 12px;
+top: 45px;
+transform: translateY(-50%);
+color: #aaa;
+transition: 
+    top 0.3s ease,
+    font-size 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-container textarea:valid  + .placeholder,
+.contact-container textarea:focus  + .placeholder,
+.contact-container input:valid + .placeholder,
+.contact-container input:focus + .placeholder {
+    top: 5px;
+    font-size: 100%;
+    color: white;
+}
+
+.contact-container textarea:valid,
+.contact-container textarea:focus,
+.contact-container input:valid,
+.contact-container input:focus{
+    background-color: #2D3133; 
+}
+
+.send-button{
+    margin: 1% 0 0;
+    font-size: 125%;
+    border: solid #2D3133 2px;
+    padding: 0.6% 2.5%;
+    transition: 
+        background-color 0.3s ease, 
+        color 0.3s ease;
+}
+
+.send-button:hover{
+    background-color: #0D0F10;
+}
+
+footer{
+    text-align: center;
+    font-size: 150%;
+    font-family: Orbitron;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1280px) {
+    #p1, #p2, #p3{
+        font-size: 170%;
+        margin: 1% 2.5% 0 2.5%;
+    }
+
+    .marko-img{
+        max-height: 260Px;
+    }
+
+    #p4{
+        font-size: 170%;
+        margin: 2.5% 5% 2.5% 5%;
+        padding: 0 0 2.5%;
+        border-bottom: solid #2D3133 4px;
+    }
+    
+    #p5{
+            font-size: 170%;
+            margin: 0 5% 0 5%;
+    }
+    
+    #li1, #li2, #li3, #li4{
+        font-size: 170%;
+        margin: 1.5% 0 0 20%;
+    }
+
+    .join-button{
+        font-size: 170%;
+    }
+
+    .anvincible-img{
+        max-height: 350Px;
+    }
+
+    .contact-container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    header{
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        z-index: 1000;
+    }
+
+    section{
+        height: 110vh;
+    }
+
+    .title-pc{
+        display: none;
+    }
+
+    .title-mobile{
+        display: block;
+        font-family: Orbitron;
+        font-size: 250%;
+        margin: 0 0 0 20px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .src-input {
+        padding: 8px 12px; 
+        width: 120px;
+        color: white;
+        font-size: 1rem;
+        font-family: RobotoCondensed;
+        background-color: #0A0B0C; 
+        border: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        transition: 
+            background-color 0.5s ease;
+    }
+
+    .menu-img{
+        display: block;
+        max-height: 40px;
+        margin: 0 20px 0 0;
+    }
+
+    .src-img{
+        display: none;
+    }
+    
+    .ship-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ship-name{
+        font-size: 320%;
+    }
+
+    .ship-launch{
+        font-size: 150%;
+    }
+
+    .year{
+        font-family: Orbitron;
+        font-size: 250%;
+    }
+
+    .ship-info{
+        border-right: none;
+    }
+
+    .more-button{
+        font-size: 200%;
+        padding: 2% 6%;
+}
+
+.about-text{
+    width: 95%;
+}
+
+.about-container{
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#p1, #p2, #p3{
+    font-size: 170%;
+    margin: 1%;
+}
+
+.anvincible-container{
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.anvincible-text{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.anvincible-features{
+    width: 100%;
+}
+.anvincible-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.join-button{
+    font-size: 200%;
+    border: solid #2D3133 2px;
+    padding: 3% 6%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px 0 0;
+}
+
+.anvincible-img{
+    max-height: 200Px;
+}
+
+    .marko-img{
+        display: none;
+    }
+
+    .e-mail input, .phone-number input, .message textarea{
+        width: 340px;
+    }
+
+    .send-button{
+        margin: 1% 0 0;
+        font-size: 200%;
+        border: solid #2D3133 2px;
+        padding: 3% 6%;
+        transition: 
+            background-color 0.3s ease, 
+            color 0.3s ease;
+    }
+}
