@@ -1,3 +1,5 @@
+gsap.registerPlugin();
+
 let previousScroll = 0;
 
 ScrollTrigger.create({
