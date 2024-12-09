@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, Draggable);
-
 let previousScroll = 0;
 
 ScrollTrigger.create({
